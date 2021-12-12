@@ -42,9 +42,9 @@ RSpec.describe Shelter, type: :model do
       end
     end
 
-    describe '#alpha_order' do
-      it 'orders the shelters by their name alphabetically' do
-        expect(Shelter.alpha_order).to eq([@shelter_1, @shelter_3, @shelter_2])
+    describe '#reverse_alpha' do
+      it 'orders the shelters by their name (reverse)alphabetically' do
+        expect(Shelter.reverse_alpha).to eq([@shelter_2, @shelter_3, @shelter_1])
       end
     end
   end

@@ -14,9 +14,9 @@ describe 'Admin Shelter Index' do
   end
 
   describe 'display' do
-    it 'in section of shelters with pending applications, shelters are alphabetical' do
-      expect(@shelter2.name).to appear_before(@shelter3.name)
-      expect(@shelter3.name).to appear_before(@shelter1.name)
+    it 'in section of shelters with pending applications, shelters are reverse alphabetical' do
+      expect(@shelter1.name).to appear_before(@shelter3.name)
+      expect(@shelter3.name).to appear_before(@shelter2.name)
 
       within('#Shelters_pending') do
         expect(page).to have_content("Shelter's with Pending Applications")
